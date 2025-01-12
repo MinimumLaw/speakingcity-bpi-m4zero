@@ -1,0 +1,1 @@
+#source "$BR2_EXTERNAL_STP_PATH/package/name/Config.in"
