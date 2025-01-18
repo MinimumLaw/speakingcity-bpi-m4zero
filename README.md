@@ -15,28 +15,26 @@ Prepare:
 3. Clone buildroot git tree from officaial source
  $ git clone https://git.buildroot.net/buildroot
 4. Clone this repositary from github
- $ git clone https://github.com/MinimumLaw/gvardman.git
+ $ git clone https://github.com/MinimumLaw/speakingcity-bpi-m4zero.git
 5. Change work directory to gvardman
- $ cd gvardman
+ $ cd speakingcity-bpi-m4zero
 6. Run build process
- $ ./build.sh
+ $ ./build-bpi-m4zero.sh
 7. Just wait for competion...
-8. You have output sdcard.img into output/orangepi3_lts/images directory
+8. You have output sdcard.img into output/bpi-m4zero/images directory
  $ ls output/orangepi3_lts/images
- bl31.bin   extlinux  orangepi3-lts.dtb  rootfs.cpio     sdcard.img  u-boot-sunxi-with-spl.bin
- boot.vfat  Image     params.ext2        rootfs.cpio.xz  u-boot.bin
+ ... sdcard.img  ...
  $
 9. You may write then to sd-card with diskdup utility
- $ sudo dd if=output/orangepi3_lts/images/sdcard.img of=/dev/flash bs=1M status=progress conv=sync
-   For console access use username "root" and password "gvardman", you alse can use
+ $ sudo dd if=output/bpi-m4zero/images/sdcard.img of=/dev/flash bs=1M status=progress conv=sync
+   For console access use username "root" and password "stp", you alse can use
    this accont via preconfigured ssh connection.
-10. Cross-compiler will be in output/orangepi3_lts/host directory, use them as you want
-11. Example of private buildroot packages you can see in package/* directory or in buildroot
+10. Example of private buildroot packages you can see in package/* directory or in buildroot
     documentation https://buildroot.org/downloads/manual/manual.html#adding-packages
 
     For Dmitry:
     Example for package, builded with Scons build system in buildroot is gpsd daemon:
     https://git.buildroot.net/buildroot/tree/package/gpsd/gpsd.mk
     You can use them as template for you personal private package
-12. Have fun! Don't worry, be happy!
+11. Have fun! Don't worry, be happy!
 
