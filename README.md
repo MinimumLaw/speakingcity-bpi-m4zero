@@ -31,10 +31,5 @@ Prepare:
    this accont via preconfigured ssh connection.
 10. Example of private buildroot packages you can see in package/* directory or in buildroot
     documentation https://buildroot.org/downloads/manual/manual.html#adding-packages
-
-    For Dmitry:
-    Example for package, builded with Scons build system in buildroot is gpsd daemon:
-    https://git.buildroot.net/buildroot/tree/package/gpsd/gpsd.mk
-    You can use them as template for you personal private package
 11. Have fun! Don't worry, be happy!
 
