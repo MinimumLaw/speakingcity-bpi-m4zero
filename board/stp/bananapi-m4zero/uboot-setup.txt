@@ -1,0 +1,19 @@
+
+#########################################################
+# Script generated form command file with simple command
+# mkimage -T script -d uboot-setup.txt uboot-setup.img
+mmc dev 1 1
+load mmc 0:1 ${loadaddr} /u-boot-sunxi-with-spl.bin
+mmc erase 0 0x2000
+mmc write ${loadaddr} 0x0 0x800
+mmc bootbus  1 1 0 0
+mmc partconf 1 1 1 0
+# mmc rst-function 1 1
+echo ====================================================
+echo =    U-Boot writen to eMMC device, partition BOOT0 =
+echo = set started on reset and ready to boot process.  =
+echo =    Apply power off, then on for noraml eMMC boot =
+echo = sequence stared. We not need boot sdcard now.    =
+echo ====================================================
+while true; do done;
+exit 0
