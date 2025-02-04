@@ -80,7 +80,7 @@ In U-Boot console make command
 
     fastboot usb 0
 
-Connect Type-C cable to OTG slot on board and PC with linux. You may write then to eMMC with diskdup utility
+Connect Type-C cable to OTG slot on board and PC with linux. You may write then to eMMC with android SDK fastboot utility
 
     fastboot flash 1:0 output/bpi-m4zero/images/sdcard.img
 
